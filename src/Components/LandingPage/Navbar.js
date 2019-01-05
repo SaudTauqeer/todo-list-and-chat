@@ -1,6 +1,10 @@
 //Imports
 import React from "react";
-import {Grid, Typography, Toolbar} from "@material-ui/core";
+import {
+    Grid, 
+    Typography, 
+    Toolbar
+} from "@material-ui/core";
 
 
 const Navbar = () =>(

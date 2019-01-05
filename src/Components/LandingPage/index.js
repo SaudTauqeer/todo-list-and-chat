@@ -1,10 +1,11 @@
 //Imports
 import React from "react";
 import Navbar from "./Navbar";
+import Body from "./Body";
 
 const Index = () => (
     <React.Fragment>
-        <Navbar />
+        <Body />
     </React.Fragment>
 );
 
