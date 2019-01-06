@@ -4,22 +4,23 @@ import Fade from '@material-ui/core/Fade';
 import Hidden from '@material-ui/core/Hidden';
 import Typist from 'react-typist';
 import googleSvg from "../images/google.svg";
+import guest from "../images/guest.svg";
+
 import {
     Grid,
     Typography,
     AppBar,
-    Toolbar,
     Button
 } from "@material-ui/core";
 
 
 
-const FadeEnterAfterTypingDone = (props) => (
+const FadeElement = (props) => (
       <React.Fragment>
           <Fade
           children={props.children}
           in={props.visible}
-          timeout={{enter: 2000}}
+          timeout={{enter: props.timeout}}
           > 
           </Fade>
       </React.Fragment>
@@ -27,17 +28,33 @@ const FadeEnterAfterTypingDone = (props) => (
 
 const MobileSocials = () => (
   <React.Fragment>
-      <Grid item >
-            <Button
-            variant="contained"
-            color="inherit"
-            >
-              Google 
-              <img 
-                style={{paddingLeft: "5px"}}
-                src ={googleSvg} alt ="Goolge-Icon" />
-            </Button>
+      <Grid item
+      style={{marginTop: "2.5em"}} 
+      >
+        <Button
+          variant="contained"
+          color="inherit"
+        >
+          Google 
+        <img 
+        style={{paddingLeft: "5px"}}
+        src ={googleSvg} alt ="Goolge-Icon" />
+        </Button>
       </Grid>
+
+    <Grid item 
+    style={{marginTop: "1.5em"}}
+    >
+      <Button
+        variant="contained"
+        color="inherit"
+        >
+          Google 
+        <img 
+          style={{paddingLeft: "5px"}}
+          src ={guest} alt ="Goolge-Icon" />
+        </Button>
+    </Grid>
   </React.Fragment>
 );
 
@@ -45,17 +62,16 @@ const MobileSocials = () => (
 
 const MobileNavbar = () => (
     <React.Fragment>
-    <AppBar 
+    <AppBar
+    style={{padding: 10}} 
     color="inherit"
     >
-      <Toolbar>
         <Grid item container justify="flex-end">
         <Button 
         color="secondary"
         variant="contained"
         >Login</Button>
         </Grid>
-      </Toolbar>
     </AppBar>
     </React.Fragment>
 );
@@ -77,7 +93,7 @@ class Body extends Component {
               margin: "0, 20, 0"
               }} 
               justify="center"
-            alignItems="center"
+              alignItems="center"
             >
               <Grid item > 
                 <Typography variant="h2">
@@ -108,13 +124,16 @@ class Body extends Component {
                       
             {/* Mobile view without react-typist. Shows Mobile friendly layout.*/}
             <Hidden smUp>
-              <Grid container 
-              justify="center" 
+              <Grid container
+              justify= "center" 
               alignItems="center"
               direction="column"
-              style={{minHeight: "100vh"}}>
-              <Typography>
-                To-Do
+              style={{minHeight: "100vh", overflowY: "hidden"}}>
+              <Typography variant="h4" gutterBottom >
+                To-Do List & Chat
+              </Typography>
+              <Typography variant="subtitle1" gutterBottom>
+                    Manage your Tasks & chat with online users.
               </Typography>
                 <MobileNavbar />
                 <MobileSocials /> 
