@@ -28,7 +28,11 @@ const FadeElement = (props) => (
 
 const MobileSocials = () => (
   <React.Fragment>
-      <Grid item
+    <FadeElement 
+    timeout={3000}
+    visible={true}
+    >
+    <Grid item
       style={{marginTop: "2.5em"}} 
       >
         <Button
@@ -41,7 +45,12 @@ const MobileSocials = () => (
         src ={googleSvg} alt ="Goolge-Icon" />
         </Button>
       </Grid>
+    </FadeElement>
 
+  <FadeElement
+  visible={true}
+  timeout={3500}
+  >
     <Grid item 
     style={{marginTop: "1.5em"}}
     >
@@ -56,6 +65,7 @@ const MobileSocials = () => (
           src ={guest} alt ="Goolge-Icon" />
         </Button>
     </Grid>
+  </FadeElement>  
   </React.Fragment>
 );
 
