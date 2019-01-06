@@ -2,9 +2,11 @@
 import React, { Component } from "react";
 import Fade from '@material-ui/core/Fade';
 import Hidden from '@material-ui/core/Hidden';
+import Grow from "@material-ui/core/Grow";
 import Typist from 'react-typist';
 import googleSvg from "../images/google.svg";
 import guest from "../images/guest.svg";
+
 
 import {
     Grid,
@@ -26,9 +28,21 @@ const FadeElement = (props) => (
       </React.Fragment>
 );
 
+const GrowElement = (props) => (
+  <React.Fragment>
+      <Grow
+      children={props.children}
+      in={props.visible}
+      timeout={{enter: props.timeout}}
+      > 
+      </Grow>
+  </React.Fragment>
+);
+
+
 const MobileSocials = () => (
   <React.Fragment>
-    <FadeElement 
+    <GrowElement
     timeout={3000}
     visible={true}
     >
@@ -45,11 +59,11 @@ const MobileSocials = () => (
         src ={googleSvg} alt ="Goolge-Icon" />
         </Button>
       </Grid>
-    </FadeElement>
+    </GrowElement>
 
-  <FadeElement
+  <GrowElement
   visible={true}
-  timeout={3500}
+  timeout={3000}
   >
     <Grid item 
     style={{marginTop: "1.5em"}}
@@ -65,7 +79,7 @@ const MobileSocials = () => (
           src ={guest} alt ="Goolge-Icon" />
         </Button>
     </Grid>
-  </FadeElement>  
+  </GrowElement>  
   </React.Fragment>
 );
 
