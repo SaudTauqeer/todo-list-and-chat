@@ -157,7 +157,9 @@ class Body extends Component {
               <Typography variant="h4" gutterBottom >
                 To-Do List & Chat
               </Typography>
-              <Typography variant="subtitle1" gutterBottom>
+              <Typography 
+              style={{paddingLeft: 14}}
+              variant="subtitle1" gutterBottom>
                     Manage your Tasks & chat with online users.
               </Typography>
                 <MobileNavbar />
