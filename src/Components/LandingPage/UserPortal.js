@@ -9,7 +9,6 @@ const style = {
 const UserPortal = () => {
     return (
         <React.Fragment>
-        
         <Paper>
             <Grid container 
             justify="center" 
