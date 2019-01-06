@@ -27,7 +27,6 @@ const FadeEnterAfterTypingDone = (props) => (
 
 const MobileSocials = () => (
   <React.Fragment>
-    <Grid container justify="center" alignItems="center">
       <Grid item >
             <Button
             variant="contained"
@@ -39,7 +38,6 @@ const MobileSocials = () => (
                 src ={googleSvg} alt ="Goolge-Icon" />
             </Button>
       </Grid>
-    </Grid>
   </React.Fragment>
 );
 
@@ -48,7 +46,6 @@ const MobileSocials = () => (
 const MobileNavbar = () => (
     <React.Fragment>
     <AppBar 
-    
     color="inherit"
     >
       <Toolbar>
@@ -79,7 +76,7 @@ class Body extends Component {
               minHeight: "100vh",
               margin: "0, 20, 0"
               }} 
-            justify="center"
+              justify="center"
             alignItems="center"
             >
               <Grid item > 
@@ -108,10 +105,17 @@ class Body extends Component {
                 </Grid>
             </Grid>
             </Hidden>
-
+                      
             {/* Mobile view without react-typist. Shows Mobile friendly layout.*/}
             <Hidden smUp>
-              <Grid container style={{minHeight: "100vh"}}>
+              <Grid container 
+              justify="center" 
+              alignItems="center"
+              direction="column"
+              style={{minHeight: "100vh"}}>
+              <Typography>
+                To-Do
+              </Typography>
                 <MobileNavbar />
                 <MobileSocials /> 
               </Grid>
