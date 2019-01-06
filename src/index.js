@@ -8,6 +8,9 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { dark } from '@material-ui/core/styles/createPalette';
 
 const theme = createMuiTheme({
+    typography: {
+        useNextVariants: true,
+      },
     palette: dark
     
 });
