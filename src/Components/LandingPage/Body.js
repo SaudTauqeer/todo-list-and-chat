@@ -48,10 +48,11 @@ const MobileSocials = () => (
       <Button
         variant="contained"
         color="inherit"
+        size="large"
         >
-          Google 
+          Guest 
         <img 
-          style={{paddingLeft: "5px"}}
+          style={{paddingLeft: "20px"}}
           src ={guest} alt ="Goolge-Icon" />
         </Button>
     </Grid>
