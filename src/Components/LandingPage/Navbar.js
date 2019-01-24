@@ -8,8 +8,8 @@ const Navbar = () => (
       <Toolbar>
         <Grid container justify="flex-end">
           <Grid item>
-            <Button variant="contained" color="inherit" size="large">
-              <Typography variant="button" color="primary">
+            <Button variant="contained" color="secondary" size="large">
+              <Typography variant="button" color="inherit">
                 Login
               </Typography>
             </Button>
